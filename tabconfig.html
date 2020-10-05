@@ -6,13 +6,14 @@
       microsoftTeams.initialize();
       microsoftTeams.settings.registerOnSaveHandler(function(saveEvent) {
         var radios = document.getElementsByName('maptype');
+		
         if (radios[0].checked) {
           microsoftTeams.settings.setSettings({
             entityID: "bing",
             contentUrl: "https://www.bing.com/maps/embed",
             suggestedTabName: "Bing Map",
             websiteUrl: "https://classflowdev2.prometheanjira.com",
-            
+            window.location.href = "https://classflowdev2.prometheanjira.com";
           });
         } else {
           microsoftTeams.settings.setSettings({
@@ -20,6 +21,7 @@
             contentUrl: "https://www.google.com/maps/embed",
             suggestedTabName: "Google Map",
             websiteUrl: "https://classflowdev2.prometheanjira.com",
+			window.location.href = "https://classflowdev2.prometheanjira.com"
             
           });
         }
