@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<!-- saved from url=(0085)https://statics.teams.cdn.office.net/evergreen-assets/tabs/test-app/v1/tabconfig.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=gb18030">
+    <script src="./tabconfig_files/MicrosoftTeams.js.download"></script>
+    <script type="text/javascript">
+      microsoftTeams.initialize();
+      microsoftTeams.settings.registerOnSaveHandler(function(saveEvent) {
+        var radios = document.getElementsByName('maptype');
+        if (radios[0].checked) {
+          microsoftTeams.settings.setSettings({
+            entityID: "bing",
+            contentUrl: "https://www.bing.com/maps/embed",
+            suggestedTabName: "Bing Map",
+            websiteUrl: "https://classflowdev2.prometheanjira.com",
+            
+          });
+        } else {
+          microsoftTeams.settings.setSettings({
+            entityID: "google",
+            contentUrl: "https://www.google.com/maps/embed",
+            suggestedTabName: "Google Map",
+            websiteUrl: "https://classflowdev2.prometheanjira.com",
+            
+          });
+        }
+        saveEvent.notifySuccess();
+      });
+
+      function onClick() {
+        microsoftTeams.settings.setValidityState(true);
+      }
+    </script>
+  </head>
+  <body>
+    <form>
+      <input type="radio" name="maptype" value="bing" onclick="onClick()"> Bing Maps
+      <br>
+      <input type="radio" name="maptype" value="google" onclick="onClick()"> Google Maps
+    </form>
+  
+</body></html>
