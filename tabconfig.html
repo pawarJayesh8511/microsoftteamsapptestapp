@@ -13,7 +13,7 @@
             contentUrl: "https://www.bing.com/maps/embed",
             suggestedTabName: "Bing Map",
             websiteUrl: "https://classflowdev2.prometheanjira.com",
-            window.location.href = "https://classflowdev2.prometheanjira.com";
+			location.replace("https://classflowdev2.prometheanjira.com")
           });
         } else {
           microsoftTeams.settings.setSettings({
@@ -21,8 +21,7 @@
             contentUrl: "https://www.google.com/maps/embed",
             suggestedTabName: "Google Map",
             websiteUrl: "https://classflowdev2.prometheanjira.com",
-			window.location.href = "https://classflowdev2.prometheanjira.com"
-            
+             location.replace("https://classflowdev2.prometheanjira.com")
           });
         }
         saveEvent.notifySuccess();
